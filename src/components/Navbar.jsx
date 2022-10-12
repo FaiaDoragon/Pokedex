@@ -1,12 +1,11 @@
 
-import React from 'react'
+import { React } from 'react'
+import { Navegacion } from './navbar/Navegacion';
 
 export const Navbar = () => {
+
+
     return (
-        <nav>
-            <label htmlFor="">NavBar:
-                <input></input>
-            </label>
-        </nav>
+        <Navegacion />
     )
 }

@@ -15,16 +15,41 @@ header {
 
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-}
-
-nav {
+.searchbar {
+    background-color: aqua;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.searchbar-top {
+    padding-right: 10px;
+}
+
+.searchbar-top input {
+    height: 30px;
+    width: 300px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px;
+}
+
+.searchbar-top input:focus {
+    outline: none;
+}
+
+.searchbar-btn button {
+    background-color: #363636;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.resultado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
