@@ -1,8 +1,6 @@
 import React from 'react'
 
-import '../styles/header.css'
-
-export const Header = () => {
+export const NavTop = () => {
 
   const imagenLogo = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png";
   

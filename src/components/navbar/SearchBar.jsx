@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import { searchPokemon } from '../../../api';
 
-export const Navegacion = () => {
+export const SearchBar = () => {
 
     const [search, setSearch] = useState();
 
