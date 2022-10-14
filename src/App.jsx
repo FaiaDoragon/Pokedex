@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 import { NavTop } from './components/navbar/NavTop'
 import { SearchBar } from './components/navbar/SearchBar'
 import { Pokedex } from './components/pokedex/Pokedex'
-import { getPokemons } from '../api'
+import { getPokemonData, getPokemons } from '../api'
 
 import './styles/header.css'
+
 
 function App() {
 
@@ -14,11 +15,13 @@ function App() {
   const fetchPokemons = async () => {
     try {
       const data = await getPokemons();
-      console.log(data);
-    } catch (error){
-
-    }
-  }
+      const promises = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url);
+      });
+      const results = await Promise.all(promises);
+      setPokemons(results);
+    } catch (err) {}
+  };
 
   useEffect(() => {
     fetchPokemons();
@@ -30,7 +33,7 @@ function App() {
       <NavTop />
       <SearchBar />
       <div className='App'>
-        <Pokedex />
+        <Pokedex pokemons={pokemons} />
       </div>
     </>
   )

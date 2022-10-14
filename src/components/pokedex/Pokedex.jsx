@@ -1,25 +1,29 @@
 import React from 'react'
+import { Pokemon } from './Pokemon'
 
-export const Pokedex = () => {
+export const Pokedex = (props) => {
+    
+    const {pokemons} = props
+
     return (
+        
         <div>
             <div className='header'>
                 <h1>Pokedex</h1>
                 <div>Paginacion</div>
             </div>
             <div className='pokedex-grid'>
-                <div className="">1</div>
-                <div className="">2</div>
-                <div className="">3</div>
-                <div className="">4</div>
-                <div className="">5</div>
-                <div className="">6</div>
-                <div className="">7</div>
-                <div className="">8</div>
-                <div className="">9</div>
-                <div className="">10</div>
-                <div className="">11</div>
-                <div className="">12</div>
+                {
+                
+                pokemons.map((pokemon, idx) => {
+                    return (
+                         
+                        <Pokemon pokemon={pokemon} key={pokemon.name} />
+                        
+                    )
+                })
+
+                }
             </div>
         </div>
     )
