@@ -6,6 +6,7 @@ import { Pokedex } from './components/pokedex/Pokedex'
 import { getPokemonData, getPokemons } from '../api'
 
 import './styles/header.css'
+import './styles/styless.css'
 
 
 function App() {

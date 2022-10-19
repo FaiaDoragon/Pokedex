@@ -4,7 +4,7 @@ import { Pokemon } from './Pokemon'
 export const Pokedex = (props) => {
     
     const {pokemons} = props
-
+    
     return (
         
         <div>
