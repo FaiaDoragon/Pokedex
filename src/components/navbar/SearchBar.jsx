@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import { searchPokemon } from '../../../api';
 
+
 export const SearchBar = () => {
 
     const [search, setSearch] = useState();
@@ -12,7 +13,7 @@ export const SearchBar = () => {
     }
 
     const onClick = async (event) => {
-        const data = await searchPokemon(search)
+        const data = await searchPokemon(search.toLowerCase())
         setPokemon(data);
     }
 
@@ -43,6 +44,7 @@ export const SearchBar = () => {
                     </div>
                 }
             </div>
+            
         </nav>
     )
 

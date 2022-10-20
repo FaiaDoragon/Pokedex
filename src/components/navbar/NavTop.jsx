@@ -5,12 +5,12 @@ export const NavTop = () => {
   const imagenLogo = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png";
   
   return (
-    <header>
+    <div className='logo'>
       <div>
-        <img className='logo'
+        <img className='image'
           src={imagenLogo}
           alt="PokeApi" />
       </div>
-    </header>
+    </div>
   )
 }

@@ -17,7 +17,7 @@ export const Pokemon = (props) => {
                     <h3>{pokemon.name}</h3>
                     <div>#{pokemon.id}</div>
                 </div>
-                <div className='card-bottom'>
+                <div className='card-botton'>
                     <div className='pokemon-type'>
                         {pokemon.types.map((type, idx) => {
                             return (
@@ -25,7 +25,7 @@ export const Pokemon = (props) => {
                             )
                         })}
                     </div>
-                    <div className='pokemon-favorite'>🧡</div>
+                    <div className='pokemon-favorite'>&#10084;&#65039;</div>
                 </div>
             </div>
         </div>
