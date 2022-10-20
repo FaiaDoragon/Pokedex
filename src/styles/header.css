@@ -97,3 +97,19 @@ header {
     width: 30px;
     
 }
+
+.searchbar-all {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.fav {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    padding: 5px;
+}
