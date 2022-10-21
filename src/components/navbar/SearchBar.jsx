@@ -1,9 +1,10 @@
 import { React, useState, useContext } from 'react'
-import { searchPokemon } from '../../../api';
 import FavoriteContext from '../context/FavoritesContext';
 
 
-export const SearchBar = () => {
+export const SearchBar = (props) => {
+
+    const { onSearch } = props;
 
     const [search, setSearch] = useState();
 
@@ -12,12 +13,14 @@ export const SearchBar = () => {
     const {favoritePokemons} = useContext(FavoriteContext);
 
     const onChange = (event) => {
-        setSearch(event.target.value);
+        setSearch(event.target.value.toLowerCase());
+        if(event.target.value.length === 0) {
+            onSearch(null)
+        }
     }
 
     const onClick = async (event) => {
-        const data = await searchPokemon(search.toLowerCase())
-        setPokemon(data);
+        onSearch(search);
     }
 
     return (

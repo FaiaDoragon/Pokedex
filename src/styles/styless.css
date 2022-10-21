@@ -53,3 +53,9 @@
 .card-top h3 {
     text-transform: capitalize;
 }
+
+.not-found-text {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 20px;
+}
